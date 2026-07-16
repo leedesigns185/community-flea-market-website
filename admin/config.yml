@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "vendors"
+    label: "Vendors"
+    folder: "_vendors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Vendor Name", name: "title", widget: "string" }
+      - { label: "Vendor Description", name: "body", widget: "markdown" }
+      - { label: "Vendor Photo", name: "image", widget: "image" }
+
+  - name: "pages"
+    label: "Website Content"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/homepage.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
