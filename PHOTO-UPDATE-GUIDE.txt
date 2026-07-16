@@ -1,0 +1,11 @@
+COMMUNITY FLEA MARKET PHOTO UPDATE GUIDE
+
+This website keeps the original rustic design.
+
+The picture cards are stored in the images folder. To replace a category image
+later, use a JPG or PNG with the same base filename and update the matching
+image src in index.html.
+
+Categories:
+jewelry, soap, candles, housewares, toiletries, clothing, stuffed-animals,
+wreaths, gift-baskets, diaper-cakes, produce, crafts.
