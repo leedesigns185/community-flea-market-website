@@ -16,6 +16,7 @@ collections:
       - { label: "Vendor Description", name: "body", widget: "markdown" }
       - { label: "Vendor Photo", name: "image", widget: "image" }
       - { label: "Show on Homepage", name: "featured", widget: "boolean", default: false, required: false }
+
   - name: "pages"
     label: "Website Content"
     files:
@@ -55,3 +56,17 @@ collections:
           - { label: "Extension Cord Rental", name: "extension_cord", widget: "string" }
           - { label: "Chair Rental", name: "chair", widget: "string" }
           - { label: "Vendor Special", name: "special", widget: "text" }
+
+      - label: "Featured Vendors"
+        name: "featured_vendors"
+        file: "content/featured-vendors.json"
+        format: "json"
+        fields:
+          - label: "Featured Vendor List"
+            name: "vendors"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Vendor Name", name: "name", widget: "string" }
+              - { label: "Vendor Description", name: "description", widget: "text" }
+              - { label: "Vendor Photo", name: "image", widget: "image" }
