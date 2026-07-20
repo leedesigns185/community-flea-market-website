@@ -219,30 +219,11 @@
     Meet some of the amazing vendors you'll find at Community Consignment Craft & Things Flea Market.
   </p>
 
-  <div class="vendor-grid">
-
-    <div class="vendor-card">
-
-      <img
-        src="images/uploads/angelas-flea-market-sign.png"
-        alt="Test Vendor"
-      >
-
-      <div class="vendor-info">
-
-        <h3>Test Vendor</h3>
-
-        <p>
-          This is a sample vendor used while we build the Featured Vendors section.
-        </p>
-
-      </div>
-
-    </div>
+  <div class="vendor-grid" id="featured-vendor-grid">
+  </div>
 
   </div>
 
-</section>
 </section>
 
 
@@ -549,10 +530,68 @@
     }
   }
 
+  function createVendorCard(vendor) {
+    const card = document.createElement("div");
+    card.className = "vendor-card";
+
+    if (vendor.image) {
+      const image = document.createElement("img");
+      image.src = vendor.image;
+      image.alt = vendor.name || "Featured vendor";
+      card.appendChild(image);
+    }
+
+    const info = document.createElement("div");
+    info.className = "vendor-info";
+
+    const heading = document.createElement("h3");
+    heading.textContent = vendor.name || "Featured Vendor";
+    info.appendChild(heading);
+
+    if (vendor.description) {
+      const description = document.createElement("p");
+      description.textContent = vendor.description;
+      info.appendChild(description);
+    }
+
+    card.appendChild(info);
+
+    return card;
+  }
+
+  async function loadFeaturedVendors() {
+    const grid = document.getElementById("featured-vendor-grid");
+
+    if (!grid) {
+      return;
+    }
+
+    try {
+      const data = await loadJson("content/featured-vendors.json");
+      const vendors = Array.isArray(data.vendors) ? data.vendors : [];
+
+      grid.replaceChildren();
+
+      vendors.forEach(function (vendor) {
+        grid.appendChild(createVendorCard(vendor));
+      });
+
+      if (vendors.length === 0) {
+        const message = document.createElement("p");
+        message.textContent = "Featured vendors will be added soon.";
+        grid.appendChild(message);
+      }
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     loadHomepageContent();
     loadAboutContent();
     loadPricingContent();
+    loadFeaturedVendors();
   });
 
   if (window.netlifyIdentity) {
