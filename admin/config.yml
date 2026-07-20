@@ -32,5 +32,26 @@ collections:
           - { label: "Manager Name", name: "manager_name", widget: "string" }
           - { label: "Phone Number", name: "phone", widget: "string" }
           - { label: "Hero Image", name: "hero_image", widget: "image" }
-          - { label: "About Section Title", name: "about_title", widget: "string" }
-          - { label: "About Section Text", name: "about_text", widget: "text" }
+
+      - label: "About the Market"
+        name: "about"
+        file: "content/about.json"
+        format: "json"
+        fields:
+          - { label: "Section Title", name: "title", widget: "string" }
+          - { label: "About Description", name: "description", widget: "text" }
+
+      - label: "Vendor Pricing"
+        name: "pricing"
+        file: "content/pricing.json"
+        format: "json"
+        fields:
+          - { label: "10×10 Vendor Space", name: "outside_vendor", widget: "string" }
+          - { label: "Weekend Vendor Price", name: "weekend_vendor", widget: "string" }
+          - { label: "Food Truck Price", name: "food_truck", widget: "string" }
+          - { label: "Electricity Price", name: "electricity", widget: "string" }
+          - { label: "Table Rental", name: "table", widget: "string" }
+          - { label: "Tent Rental", name: "tent", widget: "string" }
+          - { label: "Extension Cord Rental", name: "extension_cord", widget: "string" }
+          - { label: "Chair Rental", name: "chair", widget: "string" }
+          - { label: "Vendor Special", name: "special", widget: "text" }
