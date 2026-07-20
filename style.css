@@ -390,8 +390,9 @@ footer{
 
 .vendor-card img{
   width:100%;
-  height:260px;
-  object-fit:cover;
+  height:220px;
+  object-fit:contain;
+background:#fff;
 }
 
 .vendor-info{
