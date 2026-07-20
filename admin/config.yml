@@ -16,12 +16,13 @@ collections:
       - { label: "Vendor Description", name: "body", widget: "markdown" }
       - { label: "Vendor Photo", name: "image", widget: "image" }
 
-    - name: "pages"
+  - name: "pages"
     label: "Website Content"
     files:
       - label: "Homepage"
         name: "homepage"
         file: "content/homepage.json"
+        format: "json"
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
