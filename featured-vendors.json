@@ -1,0 +1,19 @@
+{
+  "vendors": [
+    {
+      "name": "Vendor 1",
+      "description": "Describe this vendor here.",
+      "image": "/images/uploads/angelas-flea-market-sign.png"
+    },
+    {
+      "name": "Vendor 2",
+      "description": "Describe this vendor here.",
+      "image": "/images/uploads/angelas-flea-market-sign.png"
+    },
+    {
+      "name": "Vendor 3",
+      "description": "Describe this vendor here.",
+      "image": "/images/uploads/angelas-flea-market-sign.png"
+    }
+  ]
+}
