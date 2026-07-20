@@ -15,7 +15,7 @@ collections:
       - { label: "Vendor Name", name: "title", widget: "string" }
       - { label: "Vendor Description", name: "body", widget: "markdown" }
       - { label: "Vendor Photo", name: "image", widget: "image" }
-
+      - { label: "Show on Homepage", name: "featured", widget: "boolean", default: false, required: false }
   - name: "pages"
     label: "Website Content"
     files:
