@@ -16,12 +16,20 @@ collections:
       - { label: "Vendor Description", name: "body", widget: "markdown" }
       - { label: "Vendor Photo", name: "image", widget: "image" }
 
-  - name: "pages"
+    - name: "pages"
     label: "Website Content"
     files:
       - label: "Homepage"
         name: "homepage"
-        file: "content/homepage.md"
+        file: "content/homepage.json"
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Hero Description", name: "hero_description", widget: "text" }
+          - { label: "Button Text", name: "button_text", widget: "string" }
+          - { label: "Button Link", name: "button_link", widget: "string" }
+          - { label: "Manager Name", name: "manager_name", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "About Section Title", name: "about_title", widget: "string" }
+          - { label: "About Section Text", name: "about_text", widget: "text" }
