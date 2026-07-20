@@ -1,0 +1,11 @@
+{
+  "outside_vendor": "$20 per day",
+  "weekend_vendor": "$30 weekend",
+  "food_truck": "$35 per day",
+  "electricity": "$5 per day",
+  "table": "$5 per day",
+  "tent": "$15 per day",
+  "extension_cord": "$5 per day",
+  "chair": "$2 per day",
+  "special": "Outside vendors receive 50% off their first month."
+}
